@@ -32,7 +32,7 @@ function App() {
   const addtasklist=[];
     for(let index=0;index<listarray.length;index++){
     if(listarray[index].status == value){
-      addtasklist.push(<><li onClick={()=>rechangetask(listarray[index].id)}className="users" key={listarray[index].id}>{listarray[index].title}<button className='deletebtn' onClick={()=>deletetask(listarray[index].id)}>x</button></li></>)
+      addtasklist.push(<><li className="users" key={listarray[index].id}><span  onClick={()=>rechangetask(listarray[index].id)} className="inlineblock">{listarray[index].title}</span><button className='deletebtn' onClick={()=>deletetask(listarray[index].id)}>x</button></li></>)
     }}
     return addtasklist;
   }
@@ -42,8 +42,7 @@ function App() {
     ))
     setListArray(deletearry)
     setTextList("")
-   
-  };
+}
   const [rechangetasklist,setRechangeTaskList]=useState("")
   const rechangetask=(id)=>{
     console.log("---id---",id);
@@ -64,7 +63,7 @@ function App() {
   const [listerr,setListErr]=useState(false);
   const saveaddtask=()=>{
     const editid=rechangetasklist;
-    if(textlist.length>0){
+    if(textlist.trim().length>0){
       let newtaskarray={
         id:Math.random(),
         title:textlist,
@@ -106,7 +105,7 @@ function App() {
           {data=="Backlog" && arraylist==true ?<input type="text" value={textlist}id="textlist" className="listtext" onChange={textautosave}/>:""}
           {data=="Backlog" && arraylist==true ?<button className="btn" onClick={saveaddtask}>Save</button>:""}
           {data=="Backlog" && arraylist==true && listerr==true?<span id="listerr">Please Enter a AddList</span>:""}
-          {data=="Backlog" && arraylist==true ?<button className="btn" onClick={savecancletask}>Cancel</button>:""}
+          {data=="Backlog" && arraylist==true ?<button className="cancelbtn" onClick={savecancletask}>Cancel</button>:""}
          </div>
         ))}
    </div>
