@@ -16,8 +16,6 @@ body {
   max-width: 1200px;
   margin: auto;
 }
-
-
 .childnode {
   background: #fff;
   border-radius: 10px;
@@ -55,9 +53,12 @@ body {
   font-size: 1rem;
   cursor: pointer;
 }
+
 .users:hover {
   background-color: #e0f7fa;
 }
+
+
 .btn {
   display: inline-block;
   background: #007bff;
@@ -70,9 +71,11 @@ body {
   margin-top: 10px;
   transition: background 0.3s ease;
 }
+
 .btn:hover {
   background: #0056b3;
 }
+
 .deletebtn {
   background: #ff4d4d;
   border: none;
@@ -82,9 +85,11 @@ body {
   padding: 5px 10px;
   transition: background 0.3s ease;
 }
+
 .deletebtn:hover {
   background: #cc0000;
 }
+
 .listtext {
   width: 90%;
   padding: 10px;
@@ -93,6 +98,8 @@ body {
   border-radius: 5px;
   font-size: 1rem;
 }
+
+
 #listerr {
   color: #d9534f;
   font-size: 0.9rem;
@@ -113,4 +120,7 @@ body {
 }
 .cancelbtn:hover {
   background: #cc0000;
+}
+.inlineblock{
+  display: inline-block;
 }
