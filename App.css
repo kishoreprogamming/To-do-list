@@ -1,33 +1,133 @@
-.heading{
-  color: black;
-  border:1px solid hsl(204deg 3.07% 31.96%);
-}
-.contanier{
-  display: flex;
-  background:linear-gradient(hsl(204deg 3.07% 31.96%),hsl(197.14deg 23.33% 23.53%),hsl(198deg 60.98% 16.08%)) ;
-  height: 584px;
-}
-.childnode{
-  flex:1;
-  border:1px solid hsl(204deg 3.07% 31.96%);
-  height: 584px;
-}
-.btn{
-  font-size: 25px;
-}
-.users{
-  list-style: none;
-  margin-top: 5%;
-  cursor: pointer;
-  color: white;
 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-#listerr{
-  color: rgb(235, 111, 111);
-  position: absolute;
-  top: 190px;
-  left:40px;
+
+
+.contanier {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
-.deletebtn{
-  background-color: red;
+
+
+.childnode {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.childnode:hover {
+  transform: translateY(-5px);
+}
+
+
+.heading {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+
+.listusers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.users:hover {
+  background-color: #e0f7fa;
+}
+
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.deletebtn {
+  background: #ff4d4d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+}
+
+.deletebtn:hover {
+  background: #cc0000;
+}
+
+.listtext {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+
+#listerr {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+.cancelbtn{
+  background-color: #ff4d4d;
+  display: inline-block;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+.cancelbtn:hover {
+  background: #cc0000;
 }
